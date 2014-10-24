@@ -15,20 +15,30 @@
 	</head>
 
 	<body>
-
-		<h1>
-			Cadastre-se na disciplina de SI1!
-		</h1>
-		<p>
-			Preencha os campos abaixo.
-
-			<form name="input" action="finalizaCadastro.html">
-				Primeiro nome: <input type="text" nome="primeironome"><br>
-				Último nome: <input type="text" name="ultimonome"><br>
-				Matrícula: <input type="text" name="matricula"><br>
-				<input type="submit" value="cadastre-se">
-			</form>
-
-		</p>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<h1>Cadastre-se na disciplina de SI1!</h1></div>
+		  <div class="panel-body">
+		    <p>Preencha os campos abaixo.</p>
+		    <div class="input-group">
+			  <span class="input-group-addon">Primeiro Nome</span>
+			  <input type="text" class="form-control" placeholder="Primeiro nome">
+			</div>
+			<br>
+			<div class="input-group">
+			  <span class="input-group-addon">Último nome:</span>
+			  <input type="text" class="form-control" placeholder="Último nome">
+			</div>
+			<br>
+			<div class="input-group">
+			  <span class="input-group-addon">Matrícula:</span>
+			  <input type="text" class="form-control" placeholder="Matrícula">
+			</div>
+			<br>
+			<a class="btn btn-primary btn-lg" role="button" href="finalizaCadastro.html">Cadastre-se</a><br>
+			<br>
+			<a class="btn btn-primary btn-lg" role="button" href="index.html">Cancelar</a>
+		  </div>
+		</div>
 	</body>
 </html>
