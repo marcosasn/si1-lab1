@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
 
     <title>SI1 2014.2 UFCG Cadastro</title>
 
@@ -20,26 +21,15 @@
     <!-- Custom JQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <!-- Custom Script -->
+    <script src="scripts.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-    <script>
-        $(document).ready(
-            function(){
-                $("#assunto").keypress(
-                    function(e){
-                        if(e.which == 13) {
-                            alert("Buscar endereco");
-                        }
-                    });
-            })
-    </script>
-
 
 </head>
 
@@ -72,16 +62,28 @@
         <hr>
             <h2>Sua lista dinâmica.</h2>
             <p>Insira abaixo um assunto que gostaria de aprender na disciplina.</p>
-            <p>
+            
+            <div class="assuntos">
                 <div class="input-group">
-                      <span class="input-group-addon">Assunto</span>
-                      <input id="assunto" type="text" class="form-control" placeholder="Assunto">
+                    <span class="input-group-addon">Assunto</span>
+                    <input type="text" class="form-control" id="assunto" placeholder="Assunto">
                 </div>
-            </p>
-
-
-
-            <p><a href="index.html" class="btn btn-primary">Voltar</a><br>            
+                <br>
+                <button class="btn btn-primary" id="adicionar">Adicionar</button>
+            </div>
+            <br>
+            <div style="clear: both;"></div>
+            <div class="showAssuntos">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li>Os assuntos que você gostaria de aprender serão listados nesta lista. Você pode atualizar a lista removendo ou confirmando os assuntos já apreendidos.</li>
+                    <li class="nav-tabs" id="aprender"><button type="button" class="btn input-block-level">Assuntos ainda não aprendidos</button></li>
+                    <br>
+                    <li>Os assuntos que você já aprendeu serão listados nesta lista. Você pode remove-los quando quiser.</li>
+                    <li class="nav-tabs" id="aprendidos"><button type="button" class="btn input-block-level">Assuntos aprendidos</button></li>
+                </ul>
+            </div>
+            <br>
+            <p><a href="index.html" class="btn btn-primary">Voltar</a><br>
         <hr>
 
         <!-- Footer -->
